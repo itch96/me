@@ -1,0 +1,57 @@
+$backgroundColor: #d33d50;
+$textColor: #2c2c2c;
+$MobileS: 320px;
+$MobileM: 375px;
+$MobileL: 425px;
+$Tablet: 768px;
+$Laptop: 1024px;
+$LaptopL: 1440px;
+
+html, body {
+    background: $backgroundColor;
+    color: $textColor;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: relative;
+}
+#particles-js {
+    width: 100vw;
+    height: 100vh;
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: $backgroundColor;
+    background: $textColor;
+}
+#navigation {
+    text-align: center;
+    position: fixed;
+    bottom: 0%;
+    background: $textColor;
+    color: $backgroundColor;
+}
+#navigation > a > div:hover {
+    background: $textColor;
+    animation: popOut 200ms ease-in-out forwards;
+}
+@keyframes popOut {
+    0% {transform: scale(1.0);}
+    100% {transform: scale(1.2); box-shadow: 0px -3px 5px black;}
+}
+#main {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+}
+@media only screen and (min-width: $MobileS) {
+    #navigation {
+        font-size: 16px;
+    }
+    #main {
+        font-size: 25px;
+    }
+}
+@media only screen and (min-width: $Tablet) {
+    #navigation {
+        font-size: 18px;
+    }
+}
