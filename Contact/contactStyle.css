@@ -1,0 +1,102 @@
+html, body {
+  background: #d33d50;
+  color: #2c2c2c;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  position: relative; }
+
+#particles-js {
+  width: 100vw;
+  height: 100vh; }
+
+#links {
+  position: absolute;
+  top: 30%;
+  animation: fadeIn 1s ease-in-out forwards; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+img {
+  border-radius: 1000px; }
+
+#facebook:hover {
+  animation: pop 200ms ease-in-out forwards;
+  background-color: #3b5998; }
+
+#twitter:hover {
+  animation: pop 200ms ease-in-out forwards;
+  background-color: #1dcaff; }
+
+#github:hover {
+  animation: pop 200ms ease-in-out forwards;
+  background-color: white; }
+
+#linkedin:hover {
+  animation: pop 200ms ease-in-out forwards;
+  background-color: #0077b5; }
+
+#copy:hover {
+  animation: pop 200ms ease-in-out forwards; }
+
+@keyframes pop {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px black; } }
+#myMail {
+  position: absolute;
+  top: 50%;
+  text-align: center; }
+
+#visual {
+  opacity: 0; }
+
+@keyframes visualEffect {
+  0% {
+    display: none;
+    opacity: 0; }
+  50% {
+    display: block;
+    opacity: 1; }
+  100% {
+    display: none;
+    opacity: 0; } }
+#navigation {
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  background: #2c2c2c;
+  color: #d33d50; }
+  #navigation a, #navigation a:hover, #navigation a:visited, #navigation a:active {
+    text-decoration: none;
+    color: #d33d50;
+    background: #2c2c2c; }
+
+#navigation > a > div:hover {
+  background: #2c2c2c;
+  animation: popOut 200ms ease-in-out forwards; }
+
+@keyframes popOut {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2);
+    box-shadow: 0px -3px 5px black; } }
+@media only screen and (min-width: 320px) {
+  #navigation {
+    font-size: 16px; }
+
+  img {
+    width: 50px;
+    height: 50px; }
+
+  #myMail {
+    font-size: 20px; } }
+@media only screen and (min-width: 768px) {
+  #navigation {
+    font-size: 18px; } }
+
+/*# sourceMappingURL=contactStyle.css.map */
