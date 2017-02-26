@@ -13,64 +13,15 @@ html, body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: relative;
 }
+#particles-js {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
 a, a:hover, a:visited, a:active {
     text-decoration: none;
     color: $backgroundColor;
     background: $textColor;
-}
-.display {
-    position: absolute;
-    top: 0%;
-}
-.display > div {
-    display: block;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-img {
-    height: 50vh;
-    position: aboslute;
-    top:0%;
-    // background-color: red;
-}
-.prev-icon {
-    position: fixed !important;
-    top: 2%;
-    left: 45%;
-    background-color: rgba(1, 1, 1, 0);
-    font-size: 30px;
-}
-.next-icon {
-    position: fixed !important;
-    bottom: 6%;
-    left: 45%;
-    background-color: rgba(1, 1, 1, 0);
-    font-size: 30px;
-}
-.next-icon:hover, .prev-icon:hover {
-    animation: pop 300ms ease-in-out forwards;
-}
-@keyframes pop {
-    0% {
-        transform: scale(1.0);
-        background-color: rgba(1, 1, 1, 0);
-    }
-    100% {
-        transform: scale(1.2); 
-        text-shadow: 0px 0px 3px $textColor;
-        background-color: rgba(1, 1, 1, 0);
-    }
-}
-h2, p {
-    text-align: center;
-}
-#image {
-    width: 100vw;
-}
-#description {
-    width: 80vw;
-    margin: 0 auto;
 }
 #navigation {
     text-align: center;
@@ -86,6 +37,47 @@ h2, p {
 @keyframes popOut {
     0% {transform: scale(1.0);}
     100% {transform: scale(1.2); box-shadow: 0px -3px 5px black;}
+}
+#title {
+    text-align: center;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 40%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100%{opacity: 1;}
+}
+#horizontal {
+    width: 80vw;
+    height: 3px;
+    background-color: $textColor;
+    margin: 0 10% 0 10%;
+    display: block;
+    position: absolute;
+    top: 45%;
+    // transform: translate(-50%, -50%);
+    animation: underline 2s ease-in-out;
+    box-shadow: 2px 3px 6px black;
+}
+@keyframes underline {
+    0% {transform: scaleX(0.1); opacity: 0;}
+    80% {transform: scaleX(1.1);}
+    100% {transform: scaleX(1.0); opacity: 1;}
+}
+#dev {
+    text-align: center;
+    background-color: $textColor;
+    color: $backgroundColor;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-in-out;
 }
 @media only screen and (min-width: $MobileS) {
     #navigation {
